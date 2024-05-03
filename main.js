@@ -58,6 +58,7 @@ $(document).ready(function() {
                 const estado = json.uf;
                 const endereco = `${logradouro}, ${bairro} - ${cidade} - ${estado}`;
                 $('#endereco').val(endereco)
+                calculaFrete(cidade);
             })
             .catch(function(erro) {
                 alert("Ocorreu um erro")
@@ -72,10 +73,19 @@ $(document).ready(function() {
     })
 
 
-    $('#formulario-pedido').submit(function(evento) {
+    $('formulario-pedido').submit(function(evento) {
         evento.preventDefault()
         if ($('#nome').val().length == 0 ) {
             throw new Error('Digite o nome');
         }
     }) 
+    function calculaFrete(cidade) {
+        const freteInput = $('#frete');
+        if (cidade.toLowerCase() !== 'são paulo') {
+            freteInput.val('R$10,00');
+        } else {
+            freteInput.val('Grátis');
+        }
+    }
 })
+
