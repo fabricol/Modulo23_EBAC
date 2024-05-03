@@ -9,41 +9,41 @@
 </head>
 <body>
     <div class="container">
-        <div class="mt-5">
-            <h4>Dados básicos</h4>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <input type="text" class="form-control" placeholder="Nome"/>
+        <form id="formulario-pedido">
+            <div class="mt-5">
+                <h4>Dados básicos</h4>
             </div>
-            <div class="col-5">
-                <input type="text" class="form-control" placeholder="Sobrenome"/>
+            <div class="row">
+                <div class="col-3">
+                    <input type="text" class="form-control" id="nome" placeholder="Nome"/>
+                </div>
+                <div class="col-5">
+                    <input type="text" class="form-control" placeholder="Sobrenome"/>
+                </div>
+                <div class="col-4">
+                    <input type="text" class="form-control" placeholder="E-mail"/>
+                </div>
             </div>
-            <div class="col-4">
-                <input type="text" class="form-control" placeholder="E-mail"/>
+            <div class="mt-5">
+                <h4>Dados da entrega</h4>
             </div>
-        </div>
-        <div class="mt-5">
-            <h4>Dados da entrega</h4>
-        </div>
-        <div class="row mb-5">
-            <div class="col-3 d-flex">
-                <input type="text" class="form-control" placeholder="CEP" id="cep"/>
-                <button type="button" class="btn btn-primary" id="btn-buscar-cep">
-                    <i class="bi bi-search"></i>
-                    <span class="d-none spinner-border spinner-border-sm"></span>
-                </button>
+            <div class="row mb-5">
+                <div class="col-3 d-flex">
+                    <input type="text" class="form-control" placeholder="CEP" id="cep"/>
+                    <button type="button" class="btn btn-primary" id="btn-buscar-cep">
+                        <i class="bi bi-search"></i>
+                        <span class="d-none spinner-border spinner-border-sm"></span>
+                    </button>
+                </div>
+                <div class="col-7">
+                    <input type="text" class="form-control" placeholder="Endereço" id="endereco"/>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="Número"/>
+                </div>
             </div>
-            <div class="col-7">
-                <input type="text" class="form-control" placeholder="Endereço" id="endereco"/>
-            </div>
-            <div class="col-2">
-                <input type="text" class="form-control" placeholder="Número"/>
-            </div>
-        </div>
-        <div>
-            <button class="btn btn-success">Enviar Pedido</button>
-        </div>
+                <button class="btn btn-success">Enviar Pedido</button>
+        </form>
     </div>
     <script src="jquery-3.7.1.min.js"></script>
     <script src="jquery.mask.min.js"></script>
